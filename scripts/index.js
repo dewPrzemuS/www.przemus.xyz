@@ -4,9 +4,6 @@ function updateWebsite() {
         inputText.innerHTML += "_"
     }
     setTimeout(updateWebsite, 10);
-    var dummyInput = document.getElementById("dummy")
-    dummyInput.focus()
-    dummyInput.click()
     window.scrollTo(0, document.body.scrollHeight);
 }
 
