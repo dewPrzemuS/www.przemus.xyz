@@ -1,0 +1,21 @@
+* {
+    overflow-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    color: lightgreen;
+}
+
+body {
+    padding: 10px;
+    background: #0C0C0C;
+    margin: 0;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 7.5px;
+}
+
+.input {
+    font-size: 24px;
+    font-style: italic;
+}
