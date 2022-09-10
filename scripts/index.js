@@ -7,6 +7,7 @@ function updateWebsite() {
     var dummyInput = document.getElementById("dummy")
     dummyInput.focus()
     dummyInput.click()
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 updateWebsite()
@@ -74,6 +75,19 @@ function handleCommand(command) {
         var innerArray = [
             "<a href=\"https://www.youtube.com/xFuzi\" target=\"_blank\"><b>xFuzi</b></a> - <q title=\"Original text without translation: polecam dobry serwis\">good service i recommend</q>.",
             "<a href=\"https://www.youtube.com/channel/UCYZ0tHp4a77BkCQxduZkALw\" target=\"_blank\"><b>Charlitto</b></a> - <q title=\"Original text without translation: Chciałem Ci bardzo podziękować za całą robotę, jaką dotychczas dla mnie zrobiłeś. Jestem bardzo zadowolony z twojego montażu i śmiało będę Cię polecał innym.\">I want to thank you very much for all the work you have done for me so far. I am very satisfied with your editing and will recommend you to others.</q>."
+        ]
+        for (inner in innerArray) {
+            var newInputText = document.createElement("p")
+            newInputText.innerHTML = innerArray[inner]
+            document.body.appendChild(newInputText)
+        }
+    } else if (command == "help") {
+        var innerArray = [
+            "<b>Available commands:</b>",
+            "<b>help</b> - Displays list of commands.",
+            "<b>portfolio</b> - Displays my portfolio.",
+            "<b>socials</b> - Displays my social media.",
+            "<b>feedback</b> - Feedback from clients who have used my services."
         ]
         for (inner in innerArray) {
             var newInputText = document.createElement("p")
