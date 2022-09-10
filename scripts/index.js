@@ -1,12 +1,15 @@
-function checkDOMChange() {
+function updateWebsite() {
     var inputText = document.getElementById("input")
     if (!inputText.innerHTML.includes("_")) {
         inputText.innerHTML += "_"
     }
-    setTimeout(checkDOMChange, 10);
+    setTimeout(updateWebsite, 10);
+    var dummyInput = document.getElementById("dummy")
+    dummyInput.focus()
+    dummyInput.click()
 }
 
-checkDOMChange()
+updateWebsite()
 
 document.addEventListener('keydown', (event) => {
     var inputText = document.getElementById("input")
