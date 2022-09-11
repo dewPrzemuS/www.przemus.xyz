@@ -5,6 +5,38 @@ var socialsText = document.getElementById("socials")
 var feedbackText = document.getElementById("feedback")
 
 
+portfolioText.addEventListener("click", (event) => {
+    if (isMobile) {
+        var newInputText = document.createElement("p")
+        newInputText.innerHTML = "<b>portfolio</b>"
+        document.body.appendChild(newInputText)
+        handleCommand("portfolio")
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+})
+
+socialsText.addEventListener("click", (event) => {
+    if (isMobile) {
+        var newInputText = document.createElement("p")
+        newInputText.innerHTML = "<b>socials</b>"
+        document.body.appendChild(newInputText)
+        handleCommand("socials")
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+})
+
+feedbackText.addEventListener("click", (event) => {
+    if (isMobile) {
+        var newInputText = document.createElement("p")
+        newInputText.innerHTML = "<b>feedback</b>"
+        document.body.appendChild(newInputText)
+        handleCommand("feedback")
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+})
 
 
 document.addEventListener("touchstart", (event) => {
@@ -15,29 +47,6 @@ document.addEventListener("touchstart", (event) => {
     if (helpText != null) {
         helpText.remove()
     }
-    portfolioText.addEventListener("click", (event) => {
-        var newInputText = document.createElement("p")
-        newInputText.innerHTML = "<b>portfolio</b>"
-        document.body.appendChild(newInputText)
-        handleCommand("portfolio")
-        window.scrollTo(0, document.body.scrollHeight);
-    })
-
-    socialsText.addEventListener("click", (event) => {
-        var newInputText = document.createElement("p")
-        newInputText.innerHTML = "<b>socials</b>"
-        document.body.appendChild(newInputText)
-        handleCommand("socials")
-        window.scrollTo(0, document.body.scrollHeight);
-    })
-
-    feedbackText.addEventListener("click", (event) => {
-        var newInputText = document.createElement("p")
-        newInputText.innerHTML = "<b>feedback</b>"
-        document.body.appendChild(newInputText)
-        handleCommand("feedback")
-        window.scrollTo(0, document.body.scrollHeight);
-    })
 })
 
 function updateWebsite() {
@@ -138,10 +147,11 @@ function handleCommand(command) {
             newInputText.innerHTML = innerArray[inner]
             document.body.appendChild(newInputText)
         }
-    }
-    else {
+    } else {
         var newInputText = document.createElement("p")
         newInputText.innerHTML = "Unknown command."
         document.body.appendChild(newInputText)
     }
+    var separator = document.createElement("hr")
+    document.body.appendChild(separator)
 }
